@@ -201,6 +201,7 @@ def get_pool_state_at_block(pool_address: HexAddress, block_number: int, blockch
                     symbol
                     decimals
                 }
+                sqrtPrice
                 liquidity
                 tick
                 feeTier
