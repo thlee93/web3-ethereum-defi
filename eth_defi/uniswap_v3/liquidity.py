@@ -271,6 +271,7 @@ def get_pool_state_at_block(pool_address: HexAddress, block_number: int, blockch
     return {
         "liquidity": int(pool["liquidity"]),
         "tick": int(pool["tick"]),
+        "sqrtPrice": pool['sqrtPrice'],
         "fee": int(pool["feeTier"]),
         "token0": pool["token0"],
         "token1": pool["token1"],
