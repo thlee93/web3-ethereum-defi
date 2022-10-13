@@ -26,7 +26,7 @@ UNISWAP_V3_FACTORY_ADDRESS = "0x1F98431c8aD98523631AE4a59f267346ea31F984"
 # block when factory was deployed
 UNISWAP_V3_FACTORY_CREATED_AT_BLOCK = 12369621
 UNISWAP_V3_GRAPH_ETH = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
-UNISWAP_V3_GRAPH_OPTI = "https://api.thegraph.com/subgraphs/name/revert-finance/uniswap-v3-optimism"
+UNISWAP_V3_GRAPH_OPTI = "https://api.thegraph.com/subgraphs/name/storres93/uniswap-v3-optimism"
 UNISWAP_V3_GRAPH_POLY = "https://api.thegraph.com/subgraphs/name/0xfind/uniswap-v3-polygon-beta"
 UNISWAP_V3_GRAPH_ARBI = "https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-minimal"
 
