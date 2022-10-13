@@ -184,7 +184,7 @@ def create_tick_csv(
     return file_path
 
 
-def get_pool_state_at_block(pool_address: HexAddress, block_number: int, blockchain: str = None):
+def get_pool_state_at_block(pool_address: HexAddress, block_number: int, blockchain: str = 'ethereum'):
     """Get a pool state (current liquidity, tick, ticks) at a given block using Uniswap V3 subgraph data"""
     batch_limit = 1000
     api_url = get_api_url(blockchain)
