@@ -10,7 +10,10 @@ from eth_defi.uniswap_v3.constants import (
     DEFAULT_TICK_SPACINGS,
     MAX_TICK,
     MIN_TICK,
-    UNISWAP_V3_SUBGRAPH_URL,
+    UNISWAP_V3_GRAPH_ETH,
+    UNISWAP_V3_GRAPH_OPTI,
+    UNISWAP_V3_GRAPH_POLY,
+    UNISWAP_V3_GRAPH_ARBI
 )
 
 
@@ -147,3 +150,13 @@ def get_nearest_usable_tick(tick: int, fee: int):
         return rounded - tick_spacing
     else:
         return rounded
+
+def get_api_url(chain: str):
+    if chain == 'ethereum':
+        return UNISWAP_V3_GRAPH_ETH
+    elif chain == 'optimism':
+        return UNISWAP_V3_GRAPH_OPTI
+    elif chain == 'polygon':
+        return UNISWAP_V3_GRAPH_POLY
+    elif chain == 'arbitrum':
+        return UNISWAP_V3_GRAPH_ARBI

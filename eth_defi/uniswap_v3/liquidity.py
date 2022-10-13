@@ -15,6 +15,7 @@ from eth_defi.uniswap_v3.utils import (
     run_graphql_query,
     tick_to_price,
     tick_to_sqrt_price,
+    get_api_url
 )
 
 
@@ -183,9 +184,10 @@ def create_tick_csv(
     return file_path
 
 
-def get_pool_state_at_block(pool_address: HexAddress, block_number: int):
+def get_pool_state_at_block(pool_address: HexAddress, block_number: int, blockchain: str = None):
     """Get a pool state (current liquidity, tick, ticks) at a given block using Uniswap V3 subgraph data"""
     batch_limit = 1000
+    api_url = get_api_url(blockchain)
 
     result = run_graphql_query(
         """
@@ -224,6 +226,7 @@ def get_pool_state_at_block(pool_address: HexAddress, block_number: int):
             "block_number": block_number,
             "limit": batch_limit,
         },
+        api_url=api_url
     )
 
     pool = result["pool"]
