@@ -129,7 +129,7 @@ def get_token1_amount_in_range(liquidity, sp, sa):
     return liquidity * (sp - sa)
 
 
-def run_graphql_query(query: str, *, variables: dict = {}, api_url=UNISWAP_V3_SUBGRAPH_URL) -> dict:
+def run_graphql_query(query: str, *, variables: dict = {}, api_url=UNISWAP_V3_GRAPH_ETH) -> dict:
     """Run query on Uniswap v3 subgraph"""
     transport = RequestsHTTPTransport(url=api_url, verify=True, retries=3)
     graphql_client = Client(transport=transport, fetch_schema_from_transport=True)
